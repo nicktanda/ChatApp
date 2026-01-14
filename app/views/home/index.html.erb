@@ -1,0 +1,15 @@
+<div class="home-container">
+  <h1>Welcome to Chat App</h1>
+
+  <% if logged_in? %>
+    <p>Hello, <%= current_user.email %>!</p>
+    <p>You are logged in.</p>
+    <%= button_to "Log Out", logout_path, method: :delete, class: "btn btn-logout" %>
+  <% else %>
+    <p>Please log in or sign up to continue.</p>
+    <div class="auth-buttons">
+      <%= link_to "Log In", login_path, class: "btn" %>
+      <%= link_to "Sign Up", signup_path, class: "btn" %>
+    </div>
+  <% end %>
+</div>
