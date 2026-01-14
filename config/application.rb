@@ -23,5 +23,8 @@ module ChatApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Use structure.sql instead of schema.rb for PostgreSQL-specific features
+    config.active_record.schema_format = :sql
   end
 end

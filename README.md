@@ -61,6 +61,20 @@ For production, set these environment variables:
 - `DATABASE_PASSWORD`
 - `DATABASE_HOST` (defaults to localhost)
 
+### Schema Format
+
+The app uses `db/structure.sql` instead of `schema.rb` to capture PostgreSQL-specific features (custom types, functions, triggers, etc.). The schema is dumped automatically after migrations.
+
+To manually dump the schema:
+```bash
+bin/rails db:schema:dump
+```
+
+To load the schema into a new database:
+```bash
+bin/rails db:schema:load
+```
+
 ## Testing
 
 ```bash
